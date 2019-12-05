@@ -40,7 +40,7 @@
             <em>This is emphasized.</em>
             Donec faucibus. Nunc iaculis suscipit dui. 4
             <sup>4</sup> = 256.
-            Water is H<sub>3</sub>PO<sub>4</sub>.
+            Phosphoric acid is H<sub>3</sub>PO<sub>4</sub>.
             Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
             <cite>Time Magazine</cite>
             (That’s a citation).
@@ -61,8 +61,8 @@
             <kbd>COPY</kbd>
             <em>filename</em>.
             <del>The meeting began at 7pm</del>
-            <mark>Let’s make that 6.</mark>
-            This text has been struck.</p>
+            <ins>Let’s make that 6.</ins>
+            This <s>text</s> has been struck.</p>
 
           <hr>
 
@@ -82,15 +82,73 @@
 
           <h3>Article</h3>
 
-          <h2>Article title</h2>
-          <p>Article description</p>
+          <article>
+            <h2>Article title</h2>
+            <p>Article description</p>
+          </article>
 
           <h3>Preformatted Text</h3>
           <pre>Text in a <strong>pre</strong> element<br>is displayed in a fixed-width<br>font, and it preserves<br>both      <strong>spaces</strong> and<br><strong>line breaks</strong></pre>
 
           <h3>This is code</h3>
-          <code><pre>.flex {<br>display: flex;<br>justify-content: justify;<br>aliign-items: center;<br>}</pre></code>
+          <code><pre>.flex {<br>  display: flex;<br>  justify-content: justify;<br>  aliign-items: center;<br>}</pre></code>
+
+          <h2>Unordered Wish List</h2>
+          <ul>
+            <li>Iphone 11 pro max</li>
+            <li>Books:
+              <ul>
+                <li>Clean code principles javascript</li>
+                <li>You don't know JS</li>
+                <li>Angular Pro</li>
+              </ul>
+            </li>
+            <li>Headphones</li>
+          </ul>
+
+          <h2>Ordered Task List</h2>
+          <ol>
+            <li>Pay the bills</li>
+            <li>Refuel the car</li>
+            <li>Finish homework
+              <ol>
+                <li>Create HTML page according to the requirements</li>
+                <li>Upload to the GitHub repository</li>
+              </ol>
+            </li>
+            <li>Enjoy your day</li>
+          </ol>
+          <dl>
+            <h3>Definition List</h3>
+            <dt>HTML</dt>
+            <dd>HTML is the standard markup language to create Web pages.</dd>
+            <dt>CSS</dt>
+            <dd>CSS describes how HTML elements are to be displayed.
+            </dd>
+            <dt>JavaScript</dt>
+            <dd>JavaScript is a scripting languages, primarily used on the Web.</dd>
+          </dl>
+
+          <div>
+            <label for="learning-path">Select for learning</label>
+            <select id="learning-path">
+              <option value="js">JS</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+            </select>
+          </div>
+
           <hr>
+          <hr>
+
+          <h2>Table</h2>
+          <table>
+            <tr>
+              <th>Skill</th>
+              <th>Training</th>
+              <th>City</th>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
