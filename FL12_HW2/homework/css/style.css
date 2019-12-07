@@ -1,0 +1,74 @@
+@media print {
+  .tm-sidebar,
+  .tm-team-img,
+  #about,
+  .gallery-container,
+  .carousel-indicators,
+  .img-contact-us,
+  #contact {
+    display: none;
+  }
+
+  body {
+    background-color: #fff;
+  }
+
+  .tm-banner {
+    padding-top: unset;
+  }
+
+  h2.tm-section-title,
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #5f97c5;
+    font-weight: 200;
+  }
+
+  .tm-content-box {
+    margin-bottom: 0.5rem;
+    padding: unset;
+    padding-right: 3px;
+  }
+
+  ol {
+    list-style: none;
+    text-align: center;
+    padding-left: unset;
+    width: 30.3rem;
+  }
+
+  ol li:nth-of-type(odd) {
+    text-align: right;
+  }
+
+  #home {
+    margin-bottom: 10px;
+  }
+
+  .tm-main-content {
+    padding-top: 0;
+  }
+
+  .tm-team-description-container {
+    max-width: unset;
+    text-align: center;
+  }
+
+  .tm-section-description {
+    padding: 0 2rem;
+  }
+
+  .blocks {
+    height: 11rem;
+  }
+
+  .blocks > div > .tm-section-description:last-child {
+    font-style: italic;
+    letter-spacing: 7.5px;
+  }
+
+  .padding-medium {
+    padding: unset;
+  }
+}
