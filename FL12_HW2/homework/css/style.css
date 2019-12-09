@@ -115,7 +115,7 @@
 }
 
 .flex-2-col > .tm-team-description-container > p {
-  font-size: 18px;
+  font-size: 17px;
   text-indent: 15px;
 }
 
@@ -290,4 +290,8 @@ input.form-control {
 
 textarea.form-control {
   border-color: lightskyblue;
+}
+
+.blocks .tm-content-box {
+  box-shadow: 0 3px 6px 0 rgba(200, 200, 200, 0.7);
 }
