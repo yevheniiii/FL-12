@@ -245,3 +245,19 @@ section.tm-content-box::before {
   border-top: solid 50px lightskyblue;
   border-right: solid 50px transparent;
 }
+
+input:focus {
+  background-color: lightskyblue;
+}
+
+div.form-group:nth-of-type(4)::after {
+  background: url(../img/email-icon.png) no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  content: "";
+  right: 0;
+  position: absolute;
+  margin-right: 3rem;
+  margin-top: -2.5rem;
+}
