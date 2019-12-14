@@ -7,7 +7,8 @@
   border-radius: 0.2rem;
 }
 
-@mixin link($color, $distance) {
+@mixin link($color, $distance, $font) {
+  font-family: $font;
   color: $color;
   margin-left: $distance;
 }
@@ -18,7 +19,7 @@
 
 html {
   box-sizing: border-box;
-  font-family: $fontFamily;
+  // font-family: $fontFamily;
 }
 *,
 *:after,
@@ -30,9 +31,11 @@ html {
 
 .landing-logo {
   display: flex;
+  font-family: $fontFamilyText;
+  font-weight: bold;
 
   img {
-    width: logo-image(30px);
+    width: logo-image(35px);
   }
 
   p {
@@ -40,6 +43,8 @@ html {
     flex-direction: column;
     justify-content: center;
     margin-left: 0.7rem;
+    margin-top: 0.5rem;
+    line-height: 0.7rem;
     color: $textMainColor1;
 
     span {
@@ -76,6 +81,7 @@ html {
       margin-top: 4rem;
       font-size: 2.7rem;
       font-weight: bold;
+      font-family: $fontFamilyHeading;
       position: relative;
       z-index: 100;
       color: $textMainColor1;
@@ -84,17 +90,18 @@ html {
         content: "";
         background-color: $wordHighlight3;
         left: 0;
-        top: 3.8rem;
+        top: 4.5rem;
         height: 37px;
-        width: 12.5rem;
+        width: 11.4rem;
         position: absolute;
         z-index: -1;
       }
     }
 
     .header_text {
-      margin-top: 4rem;
+      margin-top: 2rem;
       // opacity: 0.5;
+      white-space: pre-line;
       line-height: 1.3rem;
       width: 31.4rem;
       color: $textMainColor1;
@@ -109,7 +116,7 @@ html {
       }
 
       a {
-        @include link(#fff, 9rem);
+        @include link(#fff, 9rem, $fontFamilyText);
       }
     }
   }
@@ -185,12 +192,14 @@ main {
         margin-right: auto;
 
         .section_card_heading {
+          font-family: $fontFamilyHeading;
           color: $cardHeadingTextColor;
-          font-weight: bold;
+          font-weight: 600;
           margin-top: 2.3rem;
         }
 
         .section_card_text {
+          font-family: $fontFamilyText;
           color: $cardTextcolor;
           text-align: justify;
           font-size: 0.7rem;
@@ -202,7 +211,7 @@ main {
         }
 
         a {
-          @include link($cardTextcolor, unset);
+          @include link($cardTextcolor, unset, $fontFamilyText);
           font-size: 0.7rem;
           opacity: 0.7;
         }
@@ -225,6 +234,7 @@ main {
 
     p {
       margin-left: 7rem;
+      font-family: $fontFamilyText;
 
       &.section_banner_heading {
         color: $textMainColor1;
@@ -235,11 +245,11 @@ main {
 
         &:before {
           content: "";
-          background-color: $wordHighlight1;
-          right: 12.1rem;
-          bottom: 0;
-          height: 38px;
-          width: 3.5rem;
+          background-color: #2ba2da;
+          right: 11.2rem;
+          bottom: 10px;
+          height: 30px;
+          width: 3.2rem;
           position: absolute;
           z-index: -1;
         }
@@ -248,7 +258,7 @@ main {
       &.section_banner_text {
         color: $textMainColor2;
         opacity: 0.7;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         font-size: 0.9rem;
       }
     }
@@ -278,7 +288,7 @@ main {
       @extend .landing-logo;
 
       img {
-        width: logo-image(35px);
+        width: logo-image(45px);
       }
 
       p {
@@ -289,12 +299,14 @@ main {
     .footer_text {
       width: 13rem;
       margin-left: 17rem;
+      font-family: $fontFamilyText;
       font-size: 0.6rem;
     }
 
     .footer-cr {
       display: flex;
       align-items: center;
+      font-family: $fontFamilyText;
       margin-left: 15.2rem;
       font-size: 0.8rem;
     }

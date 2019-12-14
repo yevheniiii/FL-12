@@ -1,6 +1,5 @@
 html {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif; }
+  box-sizing: border-box; }
 
 *,
 *:after,
@@ -10,14 +9,18 @@ html {
   padding: 0; }
 
 .landing-logo, .footer .footer-wrap .footer_logo {
-  display: flex; }
+  display: flex;
+  font-family: "Hind", sans-serif;
+  font-weight: bold; }
   .landing-logo img, .footer .footer-wrap .footer_logo img {
-    width: 30px; }
+    width: 35px; }
   .landing-logo p, .footer .footer-wrap .footer_logo p {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 0.7rem;
+    margin-top: 0.5rem;
+    line-height: 0.7rem;
     color: #1b3144; }
     .landing-logo p span, .footer .footer-wrap .footer_logo p span {
       font-size: 0.5rem;
@@ -46,6 +49,7 @@ html {
       margin-top: 4rem;
       font-size: 2.7rem;
       font-weight: bold;
+      font-family: "Source Sans Pro", sans-serif;
       position: relative;
       z-index: 100;
       color: #1b3144; }
@@ -53,13 +57,14 @@ html {
         content: "";
         background-color: #3fa3de;
         left: 0;
-        top: 3.8rem;
+        top: 4.5rem;
         height: 37px;
-        width: 12.5rem;
+        width: 11.4rem;
         position: absolute;
         z-index: -1; }
     .header .header-wrap .header_text {
-      margin-top: 4rem;
+      margin-top: 2rem;
+      white-space: pre-line;
       line-height: 1.3rem;
       width: 31.4rem;
       color: #1b3144; }
@@ -74,6 +79,7 @@ html {
         width: 6rem;
         border-radius: 0.2rem; }
       .header .header-wrap div:nth-of-type(2) a {
+        font-family: "Hind", sans-serif;
         color: #fff;
         margin-left: 9rem; }
 
@@ -133,10 +139,12 @@ main {
         margin-left: auto;
         margin-right: auto; }
         main .section_card_wrap .section_card .section_card_right_container .section_card_heading {
+          font-family: "Source Sans Pro", sans-serif;
           color: #fff;
-          font-weight: bold;
+          font-weight: 600;
           margin-top: 2.3rem; }
         main .section_card_wrap .section_card .section_card_right_container .section_card_text {
+          font-family: "Hind", sans-serif;
           color: #e2e2e2;
           text-align: justify;
           font-size: 0.7rem;
@@ -146,6 +154,7 @@ main {
           opacity: 0.7;
           margin-bottom: 1.7rem; }
         main .section_card_wrap .section_card .section_card_right_container a {
+          font-family: "Hind", sans-serif;
           color: #e2e2e2;
           margin-left: unset;
           font-size: 0.7rem;
@@ -163,7 +172,8 @@ main {
     left: 50%;
     margin-left: -440px; }
     main .section_banner p {
-      margin-left: 7rem; }
+      margin-left: 7rem;
+      font-family: "Hind", sans-serif; }
       main .section_banner p.section_banner_heading {
         color: #1b3144;
         font-size: 1.5rem;
@@ -173,16 +183,16 @@ main {
         main .section_banner p.section_banner_heading:before {
           content: "";
           background-color: #2ba2da;
-          right: 12.1rem;
-          bottom: 0;
-          height: 38px;
-          width: 3.5rem;
+          right: 11.2rem;
+          bottom: 10px;
+          height: 30px;
+          width: 3.2rem;
           position: absolute;
           z-index: -1; }
       main .section_banner p.section_banner_text {
         color: #e2e2e2;
         opacity: 0.7;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         font-size: 0.9rem; }
     main .section_banner button.section_banner_button {
       color: #fff;
@@ -206,15 +216,17 @@ main {
     opacity: 0.8;
     justify-content: space-between; }
     .footer .footer-wrap .footer_logo img {
-      width: 35px; }
+      width: 45px; }
     .footer .footer-wrap .footer_logo p {
       color: #e2e2e2; }
     .footer .footer-wrap .footer_text {
       width: 13rem;
       margin-left: 17rem;
+      font-family: "Hind", sans-serif;
       font-size: 0.6rem; }
     .footer .footer-wrap .footer-cr {
       display: flex;
       align-items: center;
+      font-family: "Hind", sans-serif;
       margin-left: 15.2rem;
       font-size: 0.8rem; }
