@@ -55,12 +55,10 @@ html {
   background-repeat: no-repeat;
   height: 40.1rem;
   color: #fff;
-  /* color: #bfba55; */
 }
 
 .hero h1 {
   font-size: 3rem;
-  /* margin-top: 10rem; */
 }
 
 .hero p {
@@ -100,6 +98,10 @@ html {
   margin-top: 1.5rem;
 }
 
+.article-content h2 {
+  font-weight: 500;
+}
+
 .sub-heading {
   display: flex;
   flex-direction: row;
@@ -132,7 +134,7 @@ html {
 }
 
 .read-more {
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid #ece5e5;
   padding-bottom: 4rem;
 }
 
@@ -153,25 +155,43 @@ html {
 }
 
 footer {
-  display: flex;
   background-color: #000;
-  padding: 4rem 13rem 3rem;
+  padding-bottom: 4rem;
+}
+
+.footer-wrapper {
+  display: flex;
+  padding: 6rem 10rem 0;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .col-1 {
+  padding-right: 4rem;
   display: flex;
   flex-direction: column;
-  width: 30%;
 }
 
-.col-2 {
-  width: 30%;
+.col-1 .col-text {
+  margin-top: 1.4rem;
 }
 
 .col-title {
   color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .col-text {
   color: #777;
+  width: 20rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  line-height: 1.25rem;
+}
+
+.col-2 address {
+  font-style: normal;
+  line-height: 2rem;
 }
