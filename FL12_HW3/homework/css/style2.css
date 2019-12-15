@@ -49,13 +49,13 @@ html {
       margin-top: 4rem;
       font-size: 2.7rem;
       font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Source Sans Pro", sans-serif;
       position: relative;
       z-index: 100;
       color: #fff; }
       .header .header-wrap .header_heading:before {
         content: "";
-        background-color: #ff5b5b;
+        background-color: #ff5050;
         left: 0;
         top: 4.5rem;
         height: 37px;
@@ -64,6 +64,7 @@ html {
         z-index: -1; }
     .header .header-wrap .header_text {
       margin-top: 2rem;
+      font-family: "Fresca", sans-serif;
       white-space: pre-line;
       line-height: 1.3rem;
       width: 31.4rem;
@@ -79,7 +80,7 @@ html {
         width: 6rem;
         border-radius: 0.2rem; }
       .header .header-wrap div:nth-of-type(2) a {
-        font-family: "Fresca", sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         color: #fff;
         margin-left: 9rem; }
 
@@ -101,7 +102,7 @@ main {
     z-index: 100; }
     main .section_text:before {
       content: "";
-      background-color: #ff5b5b;
+      background-color: #ff5050;
       height: 38px;
       width: 9rem;
       position: absolute;
@@ -139,7 +140,7 @@ main {
         margin-left: auto;
         margin-right: auto; }
         main .section_card_wrap .section_card .section_card_right_container .section_card_heading {
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: "Source Sans Pro", sans-serif;
           color: #fff;
           font-weight: 600;
           margin-top: 2.3rem; }
@@ -173,7 +174,7 @@ main {
     margin-left: -440px; }
     main .section_banner p {
       margin-left: 7rem;
-      font-family: "Fresca", sans-serif; }
+      font-family: "Source Sans Pro", sans-serif; }
       main .section_banner p.section_banner_heading {
         color: #fff;
         font-size: 1.5rem;
@@ -182,15 +183,16 @@ main {
         z-index: 100; }
         main .section_banner p.section_banner_heading:before {
           content: "";
-          background-color: #2ba2da;
+          background-color: #ff5050;
           right: 11.2rem;
-          bottom: 10px;
+          bottom: 5px;
           height: 30px;
           width: 3.2rem;
           position: absolute;
           z-index: -1; }
       main .section_banner p.section_banner_text {
         color: #fff;
+        font-family: "Fresca", sans-serif;
         opacity: 0.7;
         margin-top: 0.5rem;
         font-size: 0.9rem; }
@@ -213,10 +215,11 @@ main {
   .footer .footer-wrap {
     margin-top: 4.5rem;
     display: flex;
+    padding: 0px 2rem;
     opacity: 0.8;
     justify-content: space-between; }
     .footer .footer-wrap .footer_logo img {
-      width: 45px; }
+      width: 40px; }
     .footer .footer-wrap .footer_logo p {
       color: #fff; }
     .footer .footer-wrap .footer_text {
@@ -228,5 +231,5 @@ main {
       display: flex;
       align-items: center;
       font-family: "Fresca", sans-serif;
-      margin-left: 15.2rem;
+      margin-left: 13.5rem;
       font-size: 0.8rem; }

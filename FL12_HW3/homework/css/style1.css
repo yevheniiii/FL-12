@@ -64,6 +64,7 @@ html {
         z-index: -1; }
     .header .header-wrap .header_text {
       margin-top: 2rem;
+      font-family: "Hind", sans-serif;
       white-space: pre-line;
       line-height: 1.3rem;
       width: 31.4rem;
@@ -79,7 +80,7 @@ html {
         width: 6rem;
         border-radius: 0.2rem; }
       .header .header-wrap div:nth-of-type(2) a {
-        font-family: "Hind", sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         color: #fff;
         margin-left: 9rem; }
 
@@ -173,7 +174,7 @@ main {
     margin-left: -440px; }
     main .section_banner p {
       margin-left: 7rem;
-      font-family: "Hind", sans-serif; }
+      font-family: "Source Sans Pro", sans-serif; }
       main .section_banner p.section_banner_heading {
         color: #1b3144;
         font-size: 1.5rem;
@@ -184,13 +185,14 @@ main {
           content: "";
           background-color: #2ba2da;
           right: 11.2rem;
-          bottom: 10px;
+          bottom: 5px;
           height: 30px;
           width: 3.2rem;
           position: absolute;
           z-index: -1; }
       main .section_banner p.section_banner_text {
         color: #e2e2e2;
+        font-family: "Hind", sans-serif;
         opacity: 0.7;
         margin-top: 0.5rem;
         font-size: 0.9rem; }
@@ -213,10 +215,11 @@ main {
   .footer .footer-wrap {
     margin-top: 4.5rem;
     display: flex;
+    padding: 0px 2rem;
     opacity: 0.8;
     justify-content: space-between; }
     .footer .footer-wrap .footer_logo img {
-      width: 45px; }
+      width: 40px; }
     .footer .footer-wrap .footer_logo p {
       color: #e2e2e2; }
     .footer .footer-wrap .footer_text {
@@ -228,5 +231,5 @@ main {
       display: flex;
       align-items: center;
       font-family: "Hind", sans-serif;
-      margin-left: 15.2rem;
+      margin-left: 13.5rem;
       font-size: 0.8rem; }
