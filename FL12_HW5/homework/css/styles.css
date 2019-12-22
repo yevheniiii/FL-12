@@ -72,6 +72,10 @@ header {
   margin-bottom: 2%;
 }
 
+header .burger {
+  display: none;
+}
+
 header .logo {
   font-size: 2rem;
   font-weight: 100;
@@ -95,7 +99,12 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
+  padding: 2.4rem;
   color: #fff;
+}
+
+nav ul li a:hover {
+  background-color: #1f52a4;
 }
 
 main {
@@ -128,6 +137,21 @@ main .posts-news {
   display: flex;
 }
 
+.posts-news article {
+  background: #453b4b;
+}
+
+.posts-news article img {
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.posts-news img:hover,
+.posts-news article div:hover {
+  opacity: 0.5;
+}
+
 main .horizontal-posts {
   width: 100%;
   margin-right: 2%;
@@ -136,6 +160,43 @@ main .horizontal-posts {
 .horizontal-posts .post {
   display: flex;
   height: 306px;
+  position: relative;
+}
+
+.horizontal-posts .post .date {
+  font-size: 2rem;
+  margin-top: 1.75rem;
+  position: absolute;
+  opacity: 0.3;
+  display: flex;
+  font-size: 3rem;
+  flex-direction: column;
+}
+
+.horizontal-posts article:nth-of-type(odd) .date .month {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 0.2rem;
+}
+
+.horizontal-posts article:nth-of-type(odd) .date {
+  right: 0;
+  top: 0;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
+}
+
+.horizontal-posts article:nth-of-type(even) .date .month {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 0.2rem;
+}
+
+.horizontal-posts article:nth-of-type(even) .date {
+  left: 0;
+  top: 0;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
 }
 
 .post img {
@@ -198,4 +259,134 @@ footer {
   padding: 2rem;
   justify-content: space-between;
   background-color: #024161;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 0.6rem 0.3rem;
+  }
+
+  header {
+    height: 13rem;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  header .burger-menu {
+    margin-bottom: 3.5rem;
+  }
+
+  header .burger-menu div {
+    opacity: 0.7;
+    width: 1.7rem;
+    height: 0.15rem;
+    background-color: #fff;
+    margin: 6px 0;
+  }
+
+  header .logo span {
+    color: #9d27b0;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .hero img {
+    height: 22rem;
+  }
+
+  .hero h2,
+  .hero p {
+    opacity: 0.7;
+  }
+
+  main .horizontal-posts {
+    margin-right: unset;
+  }
+
+  .posts-news .horizontal-posts .post {
+    flex-direction: column;
+    height: unset;
+    width: 96%;
+  }
+
+  .posts-news .horizontal-posts .post img {
+    width: 100%;
+  }
+
+  .posts-news .horizontal-posts .post .text {
+    width: 100%;
+    position: relative;
+    text-align: left;
+  }
+
+  .horizontal-posts article .text .date {
+    right: 0;
+    left: unset;
+    margin-right: 1rem;
+  }
+
+  .text h2 {
+    width: 75%;
+  }
+
+  .horizontal-posts article:nth-of-type(5) .text {
+    height: 24rem;
+  }
+
+  .horizontal-posts article:nth-of-type(5) .date {
+    top: unset;
+    bottom: 1.5rem;
+    right: 45%;
+  }
+
+  .vertical-news {
+    width: 41%;
+  }
+
+  .vertical-news h2 {
+    font-size: 1.4rem;
+  }
+
+  .vertical-news p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer p {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main .hero .hero-title {
+    width: 75%;
+    margin-bottom: 10rem;
+  }
+  main .hero .hero-subtitle {
+    width: 75%;
+  }
+
+  main .posts-news {
+    flex-direction: column;
+  }
+
+  .posts-news .horizontal-posts .post {
+    width: 100%;
+  }
+
+  .text h2 {
+    width: 100%;
+  }
+
+  .vertical-news {
+    width: 100%;
+  }
 }
