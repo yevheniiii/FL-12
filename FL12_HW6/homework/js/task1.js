@@ -19,7 +19,7 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
     console.log('x =', a);
   }
   if (a !== '0') {
-    if (corePart == 0) {
+    if (corePart === 0) {
       let answer = -b / denominator;
       console.log('x = ' + answer);
     } else if (corePart > 0) {
@@ -32,17 +32,3 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
     }
   }
 }
-//     if (part1 === 0 || part2 === 0) {
-//       console.log('x = 0');
-//     }
-//     // if (part1 < 0 || part2 < 0) {
-//     //   console.log('no solution');
-//     // }
-//     else {
-//       console.log('x1 = ' + part1);
-//       console.log('x2 = ' + part2);
-//     }
-//   } else {
-//     console.log('no solution');
-//   }
-// }

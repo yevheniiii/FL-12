@@ -6,7 +6,7 @@ let c = prompt('Enter number for c');
 
 if (isNaN(a) || isNaN(b) || isNaN(c)) {
   alert('Input values should be ONLY numbers');
-} else if (a == '0' || b == '0' || c == '0') {
+} else if (a === '0' || b === '0' || c === '0') {
   alert('A triangle must have 3 sides with a positive definite length');
 } else if (a < '0' || b < '0' || c < '0') {
   console.log('Triangle doesn’t exist');
