@@ -4,4 +4,4 @@ const isSmaller = (x, y) => {
 
 isSmaller();
 
-console.log(isSmaller(1, 5));
+isSmaller(1, 5);

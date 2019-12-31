@@ -10,4 +10,4 @@ let isLeap = year => {
       : `${finalResult} is not a leap year`;
   }
 };
-console.log(isLeap('2026-01-15 13:00:00'));
+isLeap('2026-01-15 13:00:00');
