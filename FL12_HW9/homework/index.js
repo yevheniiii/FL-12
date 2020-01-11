@@ -65,3 +65,18 @@ let makeListFromRange = arr => {
 };
 
 makeListFromRange([2, 7]);
+
+const actors = [
+  {name: 'tommy', age: 36},
+  {name: 'lee', age: 28}
+];
+
+let getArrayOfKeys = (actors, key) => {
+  let names = [];
+  executeforEach(actors, function(el) {
+    names.push(el[key]);
+  });
+  return names;
+};
+
+getArrayOfKeys(actors, 'name');
