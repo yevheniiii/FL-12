@@ -36,12 +36,32 @@ mapArray([2, '5', 8], function(el) {
 ////
 ////
 
-function flipOver(str) {
+let flipOver = str => {
   let newString = '';
   for (let i = str.length - 1; i >= 0; i--) {
     newString += str[i];
   }
   return newString;
-}
+};
 
 flipOver('hey world');
+
+let makeListFromRange = arr => {
+  let result = [];
+  let minNumber = 0;
+  let maxNumber = 1;
+  for (let i = 0; i < arr.length; i++) {
+    if (minNumber < maxNumber) {
+      minNumber = arr[i];
+    } else {
+      maxNumber = arr[i];
+    }
+  }
+
+  for (let i = minNumber; i <= maxNumber; i++) {
+    result.push(i);
+  }
+  return result;
+};
+
+makeListFromRange([2, 7]);
