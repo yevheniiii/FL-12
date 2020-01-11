@@ -31,3 +31,17 @@ let mapArray = (arr, func) => {
 mapArray([2, '5', 8], function(el) {
   return parseInt(el) + 3;
 });
+
+////
+////
+////
+
+function flipOver(str) {
+  let newString = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    newString += str[i];
+  }
+  return newString;
+}
+
+flipOver('hey world');
