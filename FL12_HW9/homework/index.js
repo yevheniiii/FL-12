@@ -2,7 +2,7 @@ const convert = (...args) => {
   let result = [];
   for (let x = 0; x < args.length; x++) {
     if (typeof args[x] === 'string') {
-      result.push(Number(args[x]));
+      result.push(parseInt(args[x]));
     } else {
       result.push(String(args[x]));
     }
@@ -25,9 +25,9 @@ executeforEach([1, 2, 3], function(el) {
 });
 
 let mapArray = (arr, func) => {
-  console.log(executeforEach(arr, func));
+  return executeforEach(arr, func);
 };
 
 mapArray([2, '5', 8], function(el) {
-  return Number(el) + 3;
+  return parseInt(el) + 3;
 });
