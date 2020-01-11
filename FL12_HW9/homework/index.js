@@ -94,3 +94,13 @@ let substitute = arr => {
 };
 
 substitute([58, 14, 48, 2, 31, 29]);
+
+const date = new Date(2019, 0, 2);
+
+let getPastDay = (date, day) => {
+  let dayConversion = day * 86400 * 1000;
+  let result = new Date(date.getTime() - dayConversion);
+  return result.getDate();
+};
+
+getPastDay(date, 1);
