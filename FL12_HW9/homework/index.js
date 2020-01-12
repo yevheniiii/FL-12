@@ -127,3 +127,24 @@ let getPastDay = (date, day) => {
 };
 
 getPastDay(date, 1);
+
+let formatDate = date => {
+  function addZero(i) {
+    if (i < 10) {
+      i = '0' + i;
+    }
+    return i;
+  }
+
+  let mm = date.getMonth() + 1;
+  let dd = date.getDate();
+  let yy = date.getFullYear();
+  let hours = addZero(date.getHours());
+  let min = addZero(date.getMinutes());
+
+  let myDateString = yy + '/' + mm + '/' + dd + ' ' + hours + ':' + min;
+
+  return myDateString;
+};
+
+formatDate(new Date('6/15/2018 09:15:00'));
