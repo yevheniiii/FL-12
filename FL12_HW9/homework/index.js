@@ -1,10 +1,20 @@
-const convert = (...args) => {
+const FIRST_VALUE_TEST = 2;
+const SECOND_VALUE_TEST = 3;
+const THIRD_VALUE_TEST = 5;
+const FOURTH_VALUE_TEST = 8;
+const FIFTH_VALUE_TEST = 58;
+const SIXTH_VALUE_TEST = 14;
+const SEVENTH_VALUE_TEST = 48;
+const YEAR_VALUE_TEST = 2019;
+const MILLISECS_IN_DAY = 86400000;
+
+let convert = (...args) => {
   let result = [];
   for (let x = 0; x < args.length; x++) {
     if (typeof args[x] === 'string') {
       result.push(parseInt(args[x]));
     } else {
-      result.push(String(args[x]));
+      result.push(`${args[x]}`);
     }
   }
   return result;
@@ -20,21 +30,33 @@ let executeforEach = (arr, func) => {
   return result;
 };
 
-executeforEach([1, 2, 3], function(el) {
-  console.log(el * 2);
+executeforEach([1, FIRST_VALUE_TEST, SECOND_VALUE_TEST], function(el) {
+  console.log(el * FIRST_VALUE_TEST);
 });
 
 let mapArray = (arr, func) => {
   return executeforEach(arr, func);
 };
 
-mapArray([2, '5', 8], function(el) {
-  return parseInt(el) + 3;
+mapArray([FIRST_VALUE_TEST, '5', SECOND_VALUE_TEST], function(el) {
+  return parseInt(el) + SECOND_VALUE_TEST;
 });
 
-////
-////
-////
+let filterArray = (arr, func) => {
+  let result = [];
+
+  executeforEach(arr, function(el) {
+    if (func(el)) {
+      result.push(el);
+    }
+  });
+
+  return result;
+};
+
+filterArray([FIRST_VALUE_TEST, THIRD_VALUE_TEST, FOURTH_VALUE_TEST], function(el) {
+  return el % FIRST_VALUE_TEST === 0;
+});
 
 let flipOver = str => {
   let newString = '';
@@ -64,7 +86,7 @@ let makeListFromRange = arr => {
   return result;
 };
 
-makeListFromRange([2, 7]);
+makeListFromRange([FIRST_VALUE_TEST, FOURTH_VALUE_TEST]);
 
 const actors = [
   {name: 'tommy', age: 36},
@@ -83,8 +105,9 @@ getArrayOfKeys(actors, 'name');
 
 let substitute = arr => {
   let result = [];
+
   mapArray(arr, function(el) {
-    if (el < 30) {
+    if (el < SIXTH_VALUE_TEST) {
       result.push('*');
     } else {
       result.push(el);
@@ -93,12 +116,12 @@ let substitute = arr => {
   return result;
 };
 
-substitute([58, 14, 48, 2, 31, 29]);
+substitute([FIFTH_VALUE_TEST, SIXTH_VALUE_TEST, SEVENTH_VALUE_TEST, FIRST_VALUE_TEST]);
 
-const date = new Date(2019, 0, 2);
+const date = new Date(YEAR_VALUE_TEST, 0, FIRST_VALUE_TEST);
 
 let getPastDay = (date, day) => {
-  let dayConversion = day * 86400 * 1000;
+  let dayConversion = day * MILLISECS_IN_DAY;
   let result = new Date(date.getTime() - dayConversion);
   return result.getDate();
 };
