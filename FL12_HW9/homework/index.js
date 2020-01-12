@@ -3,7 +3,7 @@ const SECOND_VALUE_TEST = 3;
 const THIRD_VALUE_TEST = 5;
 const FOURTH_VALUE_TEST = 8;
 const FIFTH_VALUE_TEST = 58;
-const SIXTH_VALUE_TEST = 14;
+const SIXTH_VALUE_TEST = 10;
 const SEVENTH_VALUE_TEST = 48;
 const YEAR_VALUE_TEST = 2019;
 const MILLISECS_IN_DAY = 86400000;
@@ -130,7 +130,7 @@ getPastDay(date, 1);
 
 let formatDate = date => {
   function addZero(i) {
-    if (i < 10) {
+    if (i < SIXTH_VALUE_TEST) {
       i = '0' + i;
     }
     return i;
