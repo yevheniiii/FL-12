@@ -1,5 +1,4 @@
 const MAX_PROBABILITY = 100;
-const PARTIAL_PROBABILITY = 100;
 
 class Fighter {
 
@@ -81,11 +80,9 @@ class Fighter {
   }
 
   attack(classInstance) {
-    const TOTAL_POINTS = classInstance.getStrength() + classInstance.getAgility();
-    const PROBABILITY = (MAX_PROBABILITY - TOTAL_POINTS) / MAX_PROBABILITY;
-    const RANDOM = Math.random();
+    const PROBABILITY = (MAX_PROBABILITY - classInstance.getStrength() + classInstance.getAgility()) / MAX_PROBABILITY;
 
-    if (RANDOM > PROBABILITY) {
+    if (Math.random() > PROBABILITY) {
       console.log(`${this.getName()} makes ${this.getDamage()} to ${classInstance.getName()}`);
       return classInstance.dealDamage(this.getDamage());
     } else {
@@ -98,15 +95,13 @@ class Fighter {
   }
 
   heal(healthPoints) {
-    const current = this.getHealth();
-    const total = current + healthPoints;
+    const total = this.getHealth() + healthPoints;
 
     return total > MAX_PROBABILITY ? this.setHealth(MAX_PROBABILITY) : this.setHealth(total);
   }
 
   dealDamage(damagePoints) {
-    const current = this.getHealth();
-    const total = current - damagePoints;
+    const total = this.getHealth() - damagePoints;
 
     return total < 0 ? this.setHealth(0) : this.setHealth(total);
   }
@@ -130,13 +125,15 @@ function battle(instance1, instance2) {
       if (instance1.getHealth() <= 0) {
         break;
       }
-      console.log('1:', instance1.getHealth());
-      console.log('2:', instance2.getHealth());
+
       if (instance2.getHealth() <= 0) {
         break;
       }
       instance1.attack(instance2);
-      instance2.attack(instance1);
+
+      if(instance2.getHealth() > 0) {
+        instance2.attack(instance1);
+      }
     }
     if (instance1.getHealth() === 0) {
       instance1.addLoss();
