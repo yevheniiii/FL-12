@@ -37,8 +37,13 @@ const structure = [
 
 const rootNode = document.getElementById('root');
 
-// Todo: your code goes here
-// const newDiv = document.createElement('div');
-// // newDiv.className = 'first-folder';
-// newDiv.innerHTML = '<ul><li><i class="material-icons">folder</i><span>Films</span></li></ul>';
-// rootNode.appendChild(newDiv);
+const mainDiv = document.createElement('div');
+
+mainDiv.innerHTML = `<ul id="list"><li><i class="material-icons">folder</i><span class="clickable">Films</span>
+<ul class="list inside"><li>Iron Man.avi</li><li><i class="material-icons">folder</i>
+<span class="clickable">Fantasy</span></li></ul></li>
+<li><i class="material-icons">folder</i><span class="clickable">Documents</span></li></ul>`;
+
+rootNode.appendChild(mainDiv);
+
+document.getElementById('list').style.listStyle = 'none';
